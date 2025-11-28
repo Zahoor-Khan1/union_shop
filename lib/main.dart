@@ -194,7 +194,6 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         const Text(
                           'Welcome to the Union Shop',
-
                           style: TextStyle(
                             fontSize: 32,
                             fontWeight: FontWeight.bold,
@@ -204,7 +203,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 16),
                         const Text(
-                          "This is placeholder text for the hero section.",
+                          "Shop official University of Portsmouth clothing, gifts and student essentials.",
                           style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
