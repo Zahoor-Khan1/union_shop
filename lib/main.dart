@@ -23,10 +23,9 @@ class UnionShopApp extends StatelessWidget {
       // When navigating to '/product', build and return the ProductPage
       // In your browser, try this link: http://localhost:49856/#/product
       routes: {
-  '/product': (context) => const ProductPage(),
-  '/about': (context) => const AboutPage(),
-},
-
+        '/product': (context) => const ProductPage(),
+        '/about': (context) => const AboutPage(),
+      },
     );
   }
 }
@@ -40,6 +39,10 @@ class HomeScreen extends StatelessWidget {
 
   void navigateToProduct(BuildContext context) {
     Navigator.pushNamed(context, '/product');
+  }
+
+  void navigateToAbout(BuildContext context) {
+    Navigator.pushNamed(context, '/about');
   }
 
   void placeholderCallbackForButtons() {
@@ -102,6 +105,15 @@ class HomeScreen extends StatelessWidget {
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
+                                TextButton(
+                                  onPressed: () {
+                                    navigateToAbout(context);
+                                  },
+                                  child: const Text(
+                                    'About',
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                ),
                                 IconButton(
                                   icon: const Icon(
                                     Icons.search,
