@@ -10,7 +10,13 @@ class CollectionsPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Collections'),
       ),
-      body: const SizedBox(),
+      body:const Center(
+  child: Text(
+    'Shop by Category',
+    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+  ),
+),
+
     );
   }
 }
