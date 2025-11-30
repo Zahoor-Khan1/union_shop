@@ -28,7 +28,7 @@ class CollectionsPage extends StatelessWidget {
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
             ListTile(
-              title: Text('Accessories'),
+              title: Text('Clothing'),
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
           ],
