@@ -9,18 +9,26 @@ class CollectionsPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Collections'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
+      body: const Padding(
+        padding: EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children: [
             Text(
               'Shop by Category',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 20),
             ListTile(
-              title: Text('Shirts'),
+              title: Text('Hoodies'),
+              trailing: Icon(Icons.arrow_forward_ios, size: 16),
+            ),
+            ListTile(
+              title: Text('T-Shirts'),
+              trailing: Icon(Icons.arrow_forward_ios, size: 16),
+            ),
+            ListTile(
+              title: Text('Accessories'),
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
           ],
