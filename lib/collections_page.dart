@@ -31,6 +31,10 @@ class CollectionsPage extends StatelessWidget {
               title: Text('Clothing'),
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
+            ListTile(
+              title: Text('Graduation'),
+              trailing: Icon(Icons.arrow_forward_ios, size: 16),
+            ),
           ],
         ),
       ),
