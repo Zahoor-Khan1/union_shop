@@ -24,7 +24,7 @@ class CollectionsPage extends StatelessWidget {
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
             const ListTile(
-              title: Text('T-Shirts'),
+              title: Text('Pride Collection'),
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
             ListTile(
