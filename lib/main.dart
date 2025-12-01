@@ -4,6 +4,7 @@ import 'package:union_shop/about_page.dart';
 import 'package:union_shop/collections_page.dart';
 import 'package:union_shop/graduation_page.dart';
 import 'package:union_shop/essential_range_page.dart';
+import 'package:union_shop/pride_page.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -29,6 +30,8 @@ class UnionShopApp extends StatelessWidget {
         '/collections': (context) => const CollectionsPage(),
         '/graduation': (context) => const GraduationPage(),
         '/essential': (context) => const EssentialRangePage(),
+        '/pride': (context) => const PridePage(),
+
 
 
 
