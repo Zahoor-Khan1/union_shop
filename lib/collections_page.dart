@@ -27,18 +27,20 @@ class CollectionsPage extends StatelessWidget {
               title: Text('T-Shirts'),
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
-            const ListTile(
-              title: Text('Essential Range'),
-              trailing: Icon(Icons.arrow_forward_ios, size: 16),
+            ListTile(
+              title: const Text('Essential Range'),
+              trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+              onTap: () {
+                Navigator.pushNamed(context, '/essential');
+              },
             ),
-ListTile(
-  title: const Text('Graduation'),
-  trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-  onTap: () {
-    Navigator.pushNamed(context, '/graduation');
-  },
-),
-
+            ListTile(
+              title: const Text('Graduation'),
+              trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+              onTap: () {
+                Navigator.pushNamed(context, '/graduation');
+              },
+            ),
           ],
         ),
       ),
