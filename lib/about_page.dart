@@ -34,21 +34,21 @@ class AboutPage extends StatelessWidget {
               style: TextStyle(fontSize: 16),
             ),
             SizedBox(height: 16),
-            Text(
-              'We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don’t hesitate to contact us at hello@upsu.net.',
-              style: TextStyle(fontSize: 16),
-            ),
-            SizedBox(height: 16),
-            Text(
-              'Happy shopping!',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
-            SizedBox(height: 8),
-            Text(
-              'The Union Shop & Reception Team',
-              style: TextStyle(fontSize: 16),
-            ),
-          ],
+  Text(
+    'We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don’t hesitate to contact us at hello@upsu.net.',
+    style: TextStyle(fontSize: 16),
+  ),
+  SizedBox(height: 16),
+  Text(
+    'Happy shopping!',
+    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+  ),
+  SizedBox(height: 8),
+  Text(
+    'The Union Shop & Reception Team',
+    style: TextStyle(fontSize: 16),
+  ),
+],
         ),
       ),
     );

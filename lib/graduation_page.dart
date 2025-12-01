@@ -9,8 +9,16 @@ class GraduationPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Graduation'),
       ),
-      body: const SizedBox(),
+      body: Padding(
+  padding: const EdgeInsets.all(20),
+  child: GridView.count(
+    crossAxisCount: 2,
+    crossAxisSpacing: 16,
+    mainAxisSpacing: 16,
+    children: const [],
+  ),
+),
+
     );
   }
   }
-}
