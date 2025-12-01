@@ -7,6 +7,8 @@ class AppFooter extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(16),
+      color: Colors.grey[200],
+
     );
   }
 }
