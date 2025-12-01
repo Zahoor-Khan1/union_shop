@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:union_shop/product_page.dart';
 import 'package:union_shop/about_page.dart';
+import 'package:union_shop/collections_page.dart';
+
 
 void main() {
   runApp(const UnionShopApp());
@@ -20,11 +22,12 @@ class UnionShopApp extends StatelessWidget {
       home: const HomeScreen(),
       // By default, the app starts at the '/' route, which is the HomeScreen
       initialRoute: '/',
-      // When navigating to '/product', build and return the ProductPage
-      // In your browser, try this link: http://localhost:49856/#/product
+      
       routes: {
         '/product': (context) => const ProductPage(),
         '/about': (context) => const AboutPage(),
+        '/collections': (context) => const CollectionsPage(),
+
       },
     );
   }

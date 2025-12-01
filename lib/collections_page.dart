@@ -9,32 +9,40 @@ class CollectionsPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Collections'),
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(20),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               'Shop by Category',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 20),
-            ListTile(
+            const SizedBox(height: 20),
+            const ListTile(
               title: Text('Hoodies'),
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
-            ListTile(
+            const ListTile(
               title: Text('T-Shirts'),
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
-            ListTile(
+            const ListTile(
               title: Text('Clothing'),
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
-            ListTile(
-              title: Text('Graduation'),
-              trailing: Icon(Icons.arrow_forward_ios, size: 16),
-            ),
+           ListTile(
+  title: const Text('Graduation'),
+  trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+  onTap: () {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Graduation tapped'),
+      ),
+    );
+    
+  },
+           ),
           ],
         ),
       ),
