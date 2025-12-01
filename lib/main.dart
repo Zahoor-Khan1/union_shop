@@ -5,7 +5,7 @@ import 'package:union_shop/collections_page.dart';
 import 'package:union_shop/graduation_page.dart';
 import 'package:union_shop/essential_range_page.dart';
 import 'package:union_shop/pride_page.dart';
-import 'package:union_shop/discount_page.dart';
+import 'package:union_shop/election discounts_page.dart';
 
 void main() {
   runApp(const UnionShopApp());

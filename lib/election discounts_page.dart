@@ -8,7 +8,7 @@ class DiscountPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Essential Range'),
+        title: const Text('Election Discounts'),
       ),
 body: Padding(
         padding: const EdgeInsets.all(20),
@@ -22,18 +22,18 @@ body: Padding(
               children: [
                 Expanded(
                   child: Image.asset(
-                    'assets/images/rainbow hoodie.png',
+                    'assets/images/Classic Sweatshirt.png',
                     fit: BoxFit.cover,
                   ),
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Classic Rainbow Hoodies',
+                  'Classic SweatShirts',
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(height: 4),
                 const Text(
-                  '£14.00',
+                  '£12.00',
                   style: TextStyle(fontSize: 13, color: Colors.grey),
                 ),
               ],
@@ -43,18 +43,18 @@ body: Padding(
               children: [
                 Expanded(
                   child: Image.asset(
-                    'assets/images/pride flag_pin.png',
+                    'assets/images/uop shirt.png',
                     fit: BoxFit.cover,
                   ),
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Pride Flag Pin',
+                  'Classic T-Shirts',
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(height: 4),
                 const Text(
-                  '£1.00',
+                  '£8.00',
                   style: TextStyle(fontSize: 13, color: Colors.grey),
                 ),
               ],
@@ -65,5 +65,4 @@ body: Padding(
     );
   }
 }
-
 
