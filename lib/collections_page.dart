@@ -23,9 +23,12 @@ class CollectionsPage extends StatelessWidget {
               title: Text('Hoodies'),
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
-            const ListTile(
-              title: Text('Pride Collection'),
-              trailing: Icon(Icons.arrow_forward_ios, size: 16),
+            ListTile(
+              title: const Text('Pride Collection'),
+              trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+              onTap: () {
+                Navigator.pushNamed(context, '/pride');
+              },
             ),
             ListTile(
               title: const Text('Essential Range'),
