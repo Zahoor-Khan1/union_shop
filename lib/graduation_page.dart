@@ -5,6 +5,12 @@ class GraduationPage extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const SizedBox();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Graduation'),
+      ),
+      body: const SizedBox(),
+    );
+  }
   }
 }
