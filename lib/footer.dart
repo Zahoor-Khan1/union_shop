@@ -4,6 +4,9 @@ class AppFooter extends StatelessWidget {
   const AppFooter({super.key});
 @override
   Widget build(BuildContext context) {
-    return const SizedBox();
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+    );
   }
 }
