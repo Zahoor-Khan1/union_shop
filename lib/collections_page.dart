@@ -20,7 +20,7 @@ class CollectionsPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             const ListTile(
-              title: Text('Hoodies'),
+              title: Text('Election Discounts'),
               trailing: Icon(Icons.arrow_forward_ios, size: 16),
             ),
             ListTile(
