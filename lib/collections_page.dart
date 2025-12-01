@@ -19,9 +19,12 @@ class CollectionsPage extends StatelessWidget {
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
-            const ListTile(
-              title: Text('Election Discounts'),
-              trailing: Icon(Icons.arrow_forward_ios, size: 16),
+            ListTile(
+              title: const Text('Election Discounts'),
+              trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+              onTap: () {
+                Navigator.pushNamed(context, '/discount');
+              },
             ),
             ListTile(
               title: const Text('Pride Collection'),
