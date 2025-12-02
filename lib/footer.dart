@@ -8,8 +8,9 @@ class AppFooter extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       color: Colors.grey[200],
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Wrap(
+        spacing: 40,
+        runSpacing: 24,
         children: [
           // Column 1 — Opening Hours
           const Column(
@@ -49,7 +50,6 @@ class AppFooter extends StatelessWidget {
             ],
           ),
           const SizedBox(width: 40),
-
 
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
