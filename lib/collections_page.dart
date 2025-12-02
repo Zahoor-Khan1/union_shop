@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:union_shop/footer.dart';
+
 
 class CollectionsPage extends StatelessWidget {
   const CollectionsPage({super.key});
@@ -47,6 +49,7 @@ class CollectionsPage extends StatelessWidget {
                 Navigator.pushNamed(context, '/graduation');
               },
             ),
+            const AppFooter()
           ],
         ),
       ),
