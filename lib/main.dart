@@ -119,19 +119,19 @@ class HomeScreen extends StatelessWidget {
                               children: [
                                 TextButton(
                                   onPressed: () {
-                                    navigateToAbout(context);
+                                    navigateToSale(context);
                                   },
                                   child: const Text(
-                                    'About',
+                                    'SALE!',
                                     style: TextStyle(color: Colors.grey),
                                   ),
                                 ),
                                 TextButton(
                                   onPressed: () {
-                                    navigateToSale(context);
+                                    navigateToAbout(context);
                                   },
                                   child: const Text(
-                                    'SALE!',
+                                    'About',
                                     style: TextStyle(color: Colors.grey),
                                   ),
                                 ),
