@@ -29,6 +29,8 @@ class SalePage extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16),
               ),
+              SizedBox(height: 32),
+
             ],
           ),
         ),
