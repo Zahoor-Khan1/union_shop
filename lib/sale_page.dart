@@ -13,7 +13,7 @@ class SalePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.only(top: 40),
+            padding: const EdgeInsets.only(top: 40),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -31,7 +31,7 @@ class SalePage extends StatelessWidget {
                 const SizedBox(height: 32),
                 GridView.count(
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   crossAxisCount: 2,
                   crossAxisSpacing: 16,
                   mainAxisSpacing: 16,
@@ -40,7 +40,13 @@ class SalePage extends StatelessWidget {
                       title: 'Recycled Notebook',
                       oldPrice: '£17.00',
                       newPrice: '£10.99',
-                      imageUrl: 'assets/images/recyclable_notebook.png',
+                      imageUrl: 'assets/images/recycable notebook.png',
+                    ),
+                    _SaleProductCard(
+                      title: 'Classic Hoodie',
+                      oldPrice: '£3.99',
+                      newPrice: '£1.99',
+                      imageUrl: 'assets/images/p cable.png',
                     ),
                   ],
                 ),
@@ -52,6 +58,7 @@ class SalePage extends StatelessWidget {
     );
   }
 }
+
 class _SaleProductCard extends StatelessWidget {
   final String title;
   final String oldPrice;
