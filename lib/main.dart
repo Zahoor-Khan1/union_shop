@@ -62,6 +62,10 @@ class HomeScreen extends StatelessWidget {
   void navigateToAbout(BuildContext context) {
     Navigator.pushNamed(context, '/about');
   }
+  void navigateToSale(BuildContext context) {
+  Navigator.pushNamed(context, '/sale');
+}
+
 
   void placeholderCallbackForButtons() {
   }
