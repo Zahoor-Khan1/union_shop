@@ -9,7 +9,6 @@ import 'package:union_shop/election discounts_page.dart';
 import 'package:union_shop/footer.dart';
 import 'package:union_shop/sale_page.dart';
 
-
 void main() {
   runApp(const UnionShopApp());
 }
@@ -27,7 +26,6 @@ class UnionShopApp extends StatelessWidget {
       ),
       home: const HomeScreen(),
       initialRoute: '/',
-      
       routes: {
         '/product': (context) => const ProductPage(),
         '/about': (context) => const AboutPage(),
@@ -37,12 +35,6 @@ class UnionShopApp extends StatelessWidget {
         '/pride': (context) => const PridePage(),
         '/discount': (context) => const DiscountPage(),
         '/sale': (context) => const SalePage(),
-
-
-
-
-
-
       },
     );
   }
@@ -62,13 +54,12 @@ class HomeScreen extends StatelessWidget {
   void navigateToAbout(BuildContext context) {
     Navigator.pushNamed(context, '/about');
   }
+
   void navigateToSale(BuildContext context) {
-  Navigator.pushNamed(context, '/sale');
-}
-
-
-  void placeholderCallbackForButtons() {
+    Navigator.pushNamed(context, '/sale');
   }
+
+  void placeholderCallbackForButtons() {}
 
   @override
   Widget build(BuildContext context) {
@@ -132,6 +123,15 @@ class HomeScreen extends StatelessWidget {
                                   },
                                   child: const Text(
                                     'About',
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                ),
+                                TextButton(
+                                  onPressed: () {
+                                    navigateToSale(context);
+                                  },
+                                  child: const Text(
+                                    'SALE!',
                                     style: TextStyle(color: Colors.grey),
                                   ),
                                 ),
@@ -330,7 +330,6 @@ class HomeScreen extends StatelessWidget {
 
             // Footer
             const AppFooter(),
-
           ],
         ),
       ),
