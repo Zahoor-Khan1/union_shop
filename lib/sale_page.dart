@@ -16,8 +16,8 @@ class SalePage extends StatelessWidget {
             padding: EdgeInsets.only(top: 40),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: const [
-                Text(
+              children: [
+                const Text(
                   "Don't miss out! Get yours before they're all gone!",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 16),
@@ -28,14 +28,21 @@ class SalePage extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 16),
                 ),
-                SizedBox(height: 32),
+                const SizedBox(height: 32),
                 GridView.count(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
                   crossAxisCount: 2,
                   crossAxisSpacing: 16,
                   mainAxisSpacing: 16,
-                  children: const [],
+                  children: const [
+                    _SaleProductCard(
+                      title: 'Recycled Notebook',
+                      oldPrice: '£17.00',
+                      newPrice: '£10.99',
+                      imageUrl: 'assets/images/recyclable_notebook.png',
+                    ),
+                  ],
                 ),
               ],
             ),
