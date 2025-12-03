@@ -48,6 +48,12 @@ class SalePage extends StatelessWidget {
                       newPrice: '£1.99',
                       imageUrl: 'assets/images/p cable.png',
                     ),
+                    _SaleProductCard(
+                      title: 'Dimple Pop Fidget Keyring',
+                      oldPrice: '£2.99',
+                      newPrice: '£0.99',
+                      imageUrl: 'assets/images/dimple pop.png',
+                    ),
                   ],
                 ),
               ],
