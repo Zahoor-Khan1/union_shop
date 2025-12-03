@@ -10,7 +10,7 @@ class SalePage extends StatelessWidget {
         title: const Text('SALE'),
         centerTitle: true,
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
   child: Center(
     child: Padding(
 
