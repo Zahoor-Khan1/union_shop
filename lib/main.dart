@@ -37,7 +37,6 @@ class UnionShopApp extends StatelessWidget {
         '/discount': (context) => const DiscountPage(),
         '/sale': (context) => const SalePage(),
         '/personalisation': (context) => const PersonalisationPage(),
-
       },
     );
   }
@@ -150,6 +149,33 @@ class HomeScreen extends StatelessWidget {
                                   ],
                                   child: const Text(
                                     'Shop',
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                ),
+                                const SizedBox(width: 16),
+
+                                PopupMenuButton<String>(
+                                  onSelected: (value) {
+                                    if (value == 'about_print') {
+                                      Navigator.pushNamed(context, '/about');
+                                    }
+                                    if (value == 'personalisation') {
+                                      Navigator.pushNamed(
+                                          context, '/personalisation');
+                                    }
+                                  },
+                                  itemBuilder: (context) => const [
+                                    PopupMenuItem(
+                                      value: 'about_print',
+                                      child: Text('About'),
+                                    ),
+                                    PopupMenuItem(
+                                      value: 'personalisation',
+                                      child: Text('Personalisation'),
+                                    ),
+                                  ],
+                                  child: const Text(
+                                    'The Print Shack',
                                     style: TextStyle(color: Colors.grey),
                                   ),
                                 ),
