@@ -123,9 +123,13 @@ class HomeScreen extends StatelessWidget {
                                       Navigator.pushNamed(context, '/pride');
                                     }
                                     if (value == 'graduation') {
-      Navigator.pushNamed(context, '/graduation');
-    }
-
+                                      Navigator.pushNamed(
+                                          context, '/graduation');
+                                      if (value == 'essential') {
+                                        Navigator.pushNamed(
+                                            context, '/essential');
+                                      }
+                                    }
                                   },
                                   itemBuilder: (context) => [
                                     const PopupMenuItem(
@@ -136,7 +140,10 @@ class HomeScreen extends StatelessWidget {
                                       value: 'graduation',
                                       child: Text('Graduation'),
                                     ),
-                                    
+                                    const PopupMenuItem(
+                                      value: 'essential',
+                                      child: Text('Essential Range'),
+                                    ),
                                   ],
                                   child: const Text(
                                     'Shop',
