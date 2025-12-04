@@ -67,7 +67,11 @@ class PersonalisationPage extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
-              
+              SizedBox(height: 16),
+              Text(
+                'Please ensure all spellings are correct before submitting your purchase as we will print your item exactly as provided. Personalised items do not qualify for refunds.',
+                style: TextStyle(color: Colors.grey, height: 1.5),
+              ),
               SizedBox(height: 24),
               SizedBox(
                 width: double.infinity,
