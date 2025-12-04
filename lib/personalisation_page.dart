@@ -22,6 +22,17 @@ class PersonalisationPage extends StatelessWidget {
     child: Text('Product Image'),
   ),
 ),
+SizedBox(height: 20),
+Text(
+  'Personalisation',
+  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+),
+SizedBox(height: 8),
+Text(
+  '£3.00',
+  style: TextStyle(fontSize: 18, color: Colors.grey),
+),
+
 ],
     ),
   ),
