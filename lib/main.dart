@@ -122,6 +122,10 @@ class HomeScreen extends StatelessWidget {
                                     if (value == 'pride') {
                                       Navigator.pushNamed(context, '/pride');
                                     }
+                                    if (value == 'graduation') {
+      Navigator.pushNamed(context, '/graduation');
+    }
+
                                   },
                                   itemBuilder: (context) => [
                                     const PopupMenuItem(
@@ -132,6 +136,7 @@ class HomeScreen extends StatelessWidget {
                                       value: 'graduation',
                                       child: Text('Graduation'),
                                     ),
+                                    
                                   ],
                                   child: const Text(
                                     'Shop',
