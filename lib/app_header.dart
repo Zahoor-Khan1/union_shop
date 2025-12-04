@@ -129,6 +129,42 @@ TextButton(
     style: TextStyle(color: Colors.grey),
   ),
 ),
+const SizedBox(width: 8),
+
+IconButton(
+  icon: const Icon(
+    Icons.search,
+    size: 18,
+    color: Colors.grey,
+  ),
+  onPressed: () {},
+),
+IconButton(
+  icon: const Icon(
+    Icons.person_outline,
+    size: 18,
+    color: Colors.grey,
+  ),
+  onPressed: () {},
+),
+IconButton(
+  icon: const Icon(
+    Icons.shopping_bag_outlined,
+    size: 18,
+    color: Colors.grey,
+  ),
+  onPressed: () {},
+),
+IconButton(
+  icon: const Icon(
+    Icons.menu,
+    size: 18,
+    color: Colors.grey,
+  ),
+  onPressed: () {},
+),
+
+const Spacer(),
 
 const Spacer(),
 
