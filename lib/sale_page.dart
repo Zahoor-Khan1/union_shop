@@ -6,10 +6,6 @@ class SalePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SALE'),
-        centerTitle: true,
-      ),
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
@@ -17,6 +13,14 @@ class SalePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                const Text(
+                  'SALE',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 16),
                 const Text(
                   "Don't miss out! Get yours before they're all gone!",
                   textAlign: TextAlign.center,
