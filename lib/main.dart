@@ -119,6 +119,15 @@ class HomeScreen extends StatelessWidget {
                               children: [
                                 TextButton(
                                   onPressed: () {
+                                    navigateToAbout(context);
+                                  },
+                                  child: const Text(
+                                    'About',
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                ),
+                                TextButton(
+                                  onPressed: () {
                                     navigateToSale(context);
                                   },
                                   child: const Text(
