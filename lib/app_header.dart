@@ -110,6 +110,18 @@ const SizedBox(width: 16),
 
 TextButton(
   onPressed: () {
+    Navigator.pushNamed(context, '/sale');
+  },
+  child: const Text(
+    'SALE!',
+    style: TextStyle(color: Colors.grey),
+  ),
+),
+
+const SizedBox(width: 16),
+
+TextButton(
+  onPressed: () {
     Navigator.pushNamed(context, '/about');
   },
   child: const Text(
