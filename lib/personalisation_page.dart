@@ -32,6 +32,20 @@ Text(
   '£3.00',
   style: TextStyle(fontSize: 18, color: Colors.grey),
 ),
+SizedBox(height: 20),
+Text('Per Line'),
+SizedBox(height: 6),
+DropdownButtonFormField<String>(
+  items: const [
+    DropdownMenuItem(value: 'one', child: Text('One Line of Text')),
+    DropdownMenuItem(value: 'two', child: Text('Two Lines of Text')),
+  ],
+  onChanged: (value) {},
+  decoration: const InputDecoration(
+    border: OutlineInputBorder(),
+  ),
+),
+
 
 ],
     ),
