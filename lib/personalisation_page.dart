@@ -10,11 +10,19 @@ class PersonalisationPage extends StatelessWidget {
     title: const Text('Personalisation'),
     centerTitle: true,
   ),body: SingleChildScrollView(
-  child: const Padding(
-    padding: EdgeInsets.all(24),
+  child: Padding(
+    padding: const EdgeInsets.all(24),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [],
+      children: [Container(
+  height: 260,
+  width: double.infinity,
+  color: Colors.grey[300],
+  child: const Center(
+    child: Text('Product Image'),
+  ),
+),
+],
     ),
   ),
 ),
