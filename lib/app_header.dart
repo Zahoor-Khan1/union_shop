@@ -26,17 +26,26 @@ class AppHeader extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Row(
           children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/');
-              },
-              child: Image.network(
-                'https://shop.upsu.net/cdn/shop/files/upsu_300x300.png?v=1614735854',
-                height: 18,
-                fit: BoxFit.cover,
-              ),
-            ),
-            const Spacer(),
+           Image.network(
+  'https://shop.upsu.net/cdn/shop/files/upsu_300x300.png?v=1614735854',
+  height: 18,
+  fit: BoxFit.cover,
+),
+
+const SizedBox(width: 16),
+
+TextButton(
+  onPressed: () {
+    Navigator.pushNamed(context, '/');
+  },
+  child: const Text(
+    'Home',
+    style: TextStyle(color: Colors.grey),
+  ),
+),
+
+const Spacer(),
+
           ],
         ),
       ),
