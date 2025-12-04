@@ -117,12 +117,24 @@ class HomeScreen extends StatelessWidget {
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                TextButton(
-                                  onPressed: () {
-                                    navigateToAbout(context);
+                                PopupMenuButton<String>(
+                                  onSelected: (value) {
+                                    if (value == 'pride') {
+                                      Navigator.pushNamed(context, '/pride');
+                                    }
                                   },
+                                  itemBuilder: (context) => [
+                                    const PopupMenuItem(
+                                      value: 'pride',
+                                      child: Text('Pride Collection'),
+                                    ),
+                                    const PopupMenuItem(
+                                      value: 'graduation',
+                                      child: Text('Graduation'),
+                                    ),
+                                  ],
                                   child: const Text(
-                                    'About',
+                                    'Shop',
                                     style: TextStyle(color: Colors.grey),
                                   ),
                                 ),
