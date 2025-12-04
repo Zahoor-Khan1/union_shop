@@ -46,15 +46,38 @@ TextButton(
 
 const SizedBox(width: 16),
 
-TextButton(
-  onPressed: () {
-    Navigator.pushNamed(context, '/sale');
+PopupMenuButton<String>(
+  onSelected: (value) {
+    if (value == 'pride') {
+      Navigator.pushNamed(context, '/pride');
+    }
+    if (value == 'graduation') {
+      Navigator.pushNamed(context, '/graduation');
+    }
+    if (value == 'essential') {
+      Navigator.pushNamed(context, '/essential');
+    }
   },
+  itemBuilder: (context) => const [
+    PopupMenuItem(
+      value: 'pride',
+      child: Text('Pride Collection'),
+    ),
+    PopupMenuItem(
+      value: 'graduation',
+      child: Text('Graduation'),
+    ),
+    PopupMenuItem(
+      value: 'essential',
+      child: Text('Essential Range'),
+    ),
+  ],
   child: const Text(
-    'SALE!',
+    'Shop',
     style: TextStyle(color: Colors.grey),
   ),
 ),
+
 
 const SizedBox(width: 16),
 
