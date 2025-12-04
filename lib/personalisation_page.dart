@@ -57,6 +57,15 @@ class PersonalisationPage extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
+              SizedBox(height: 24),
+              SizedBox(
+                width: double.infinity,
+                height: 48,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('ADD TO CART'),
+                ),
+              ),
             ],
           ),
         ),
