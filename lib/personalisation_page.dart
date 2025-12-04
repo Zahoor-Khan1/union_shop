@@ -34,6 +34,16 @@ class PersonalisationPage extends StatelessWidget {
                 '£3.00',
                 style: TextStyle(fontSize: 18, color: Colors.grey),
               ),
+              SizedBox(height: 16),
+              Text(
+                '£3 for one line of text! £5 for two!',
+                style: TextStyle(color: Colors.grey),
+              ),
+              SizedBox(height: 8),
+              Text(
+                'One line of text is 10 characters.',
+                style: TextStyle(color: Colors.grey),
+              ),
               SizedBox(height: 20),
               Text('Per Line'),
               SizedBox(height: 6),
@@ -57,6 +67,7 @@ class PersonalisationPage extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
+              
               SizedBox(height: 24),
               SizedBox(
                 width: double.infinity,
