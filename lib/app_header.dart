@@ -45,7 +45,7 @@ class AppHeader extends StatelessWidget {
                                 const PopupMenuItem(
                                     value: 'sale', child: Text('Sale')),
                                 const PopupMenuItem(
-                                    value: 'about', child: Text('About')),
+                                    value: 'about_print', child: Text('About')),
                               ],
                             ).then((value) {
                               if (value == 'home')
@@ -113,7 +113,7 @@ class AppHeader extends StatelessWidget {
                             PopupMenuButton<String>(
                               onSelected: (value) {
                                 if (value == 'about_print') {
-                                  Navigator.pushNamed(context, '/about');
+                                  Navigator.pushNamed(context, '/p-about');
                                 }
                                 if (value == 'personalisation') {
                                   Navigator.pushNamed(
