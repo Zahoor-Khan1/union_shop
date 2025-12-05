@@ -14,8 +14,7 @@ class ProductPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-final imagePath =
-    ModalRoute.of(context)?.settings.arguments as String?;
+    final imagePath = ModalRoute.of(context)?.settings.arguments as String?;
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -82,7 +81,9 @@ final imagePath =
                                     minWidth: 32,
                                     minHeight: 32,
                                   ),
-                                  onPressed: placeholderCallbackForButtons,
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/cart');
+                                  },
                                 ),
                                 IconButton(
                                   icon: const Icon(
@@ -205,67 +206,60 @@ final imagePath =
                   ),
                   const SizedBox(height: 20),
                   SizedBox(
-  width: 150,
-  child: DropdownButtonFormField<String>(
-    value: 'Black',
-    decoration: const InputDecoration(
-      labelText: 'Color',
-      border: OutlineInputBorder(),
-    ),
-    items: const [
-      DropdownMenuItem(value: 'Black', child: Text('Black')),
-      DropdownMenuItem(value: 'Blue', child: Text('Blue')),
-      DropdownMenuItem(value: 'Grey', child: Text('Grey')),
-    ],
-    onChanged: (value) {},
-  ),
-),
-const SizedBox(height: 24),
+                    width: 150,
+                    child: DropdownButtonFormField<String>(
+                      value: 'Black',
+                      decoration: const InputDecoration(
+                        labelText: 'Color',
+                        border: OutlineInputBorder(),
+                      ),
+                      items: const [
+                        DropdownMenuItem(value: 'Black', child: Text('Black')),
+                        DropdownMenuItem(value: 'Blue', child: Text('Blue')),
+                        DropdownMenuItem(value: 'Grey', child: Text('Grey')),
+                      ],
+                      onChanged: (value) {},
+                    ),
+                  ),
+                  const SizedBox(height: 24),
 
-SizedBox(
-  width: 200,
-  child: DropdownButtonFormField<String>(
-    value: 'M',
-    decoration: const InputDecoration(
-      labelText: 'Size',
-      border: OutlineInputBorder(),
-    ),
-    items: const [
-      DropdownMenuItem(value: 'S', child: Text('S')),
-      DropdownMenuItem(value: 'M', child: Text('M')),
-      DropdownMenuItem(value: 'L', child: Text('L')),
-    ],
-    onChanged: (value) {},
-  ),
-),
-const SizedBox(height: 24),
+                  SizedBox(
+                    width: 200,
+                    child: DropdownButtonFormField<String>(
+                      value: 'M',
+                      decoration: const InputDecoration(
+                        labelText: 'Size',
+                        border: OutlineInputBorder(),
+                      ),
+                      items: const [
+                        DropdownMenuItem(value: 'S', child: Text('S')),
+                        DropdownMenuItem(value: 'M', child: Text('M')),
+                        DropdownMenuItem(value: 'L', child: Text('L')),
+                      ],
+                      onChanged: (value) {},
+                    ),
+                  ),
+                  const SizedBox(height: 24),
 
+                  SizedBox(
+                    width: 150,
+                    child: TextFormField(
+                      initialValue: '1',
+                      decoration: const InputDecoration(
+                        labelText: 'Quantity',
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 24),
 
-SizedBox(
-  width: 150,
-  child: TextFormField(
-    initialValue: '1',
-    decoration: const InputDecoration(
-      labelText: 'Quantity',
-      border: OutlineInputBorder(),
-    ),
-  ),
-),
-const SizedBox(height: 24),
-
-SizedBox(
-  width: double.infinity,
-  child: ElevatedButton(
-    onPressed: () {},
-    child: const Text('ADD TO CART'),
-  ),
-),
-
-
-
-
-
-
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('ADD TO CART'),
+                    ),
+                  ),
 
                   const SizedBox(height: 24),
 
