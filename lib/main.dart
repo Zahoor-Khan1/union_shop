@@ -227,7 +227,28 @@ const Text(
   ),
 ),
 
-const SizedBox(height: 24),
+GridView.count(
+  shrinkWrap: true,
+  physics: const NeverScrollableScrollPhysics(),
+  crossAxisCount:
+      MediaQuery.of(context).size.width > 600 ? 2 : 1,
+  crossAxisSpacing: 24,
+  mainAxisSpacing: 48,
+  children: const [
+    ProductCard(
+      title: 'Portsmouth City Postcard',
+      price: '£1.99',
+      imageUrl: 'assets/images/portsmouth city postcard.png',
+    ),
+    ProductCard(
+      title: 'Portsmouth City Magnet',
+      price: '£3.99',
+      imageUrl: 'assets/images/p magnet.png',
+    ),
+  ],
+),
+
+
 
                   ],
                 ),
