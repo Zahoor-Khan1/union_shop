@@ -5,7 +5,7 @@ class AppHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isMobile = MediaQuery.of(context).size.width < 700;
+    final bool isMobile = MediaQuery.of(context).size.width < 430;
 
     return Container(
       height: 100,
@@ -156,7 +156,7 @@ class AppHeader extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(width: 8),
-                          IconButton(
+                         IconButton( 
                             icon: const Icon(
                               Icons.search,
                               size: 18,
