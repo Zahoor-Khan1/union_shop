@@ -75,6 +75,19 @@ const Padding(
     ),
   ),
 ),
+const SizedBox(height: 12),
+
+const Padding(
+  padding: EdgeInsets.symmetric(horizontal: 24),
+  child: Text(
+    "Whether you’re repping your university or putting your own spin on a hoodie you already own, we’ve got you covered. We can personalise official uni-branded clothing and your own items - just bring them in and let’s get creative!",
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      fontSize: 16,
+      height: 1.6,
+    ),
+  ),
+),
 
 
 
