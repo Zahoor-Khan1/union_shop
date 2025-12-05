@@ -10,6 +10,8 @@ import 'package:union_shop/pride_page.dart';
 import 'package:union_shop/election discounts_page.dart';
 import 'package:union_shop/footer.dart';
 import 'package:union_shop/sale_page.dart';
+import 'package:union_shop/cart_page.dart';
+
 
 void main() {
   runApp(const UnionShopApp());
@@ -38,6 +40,8 @@ class UnionShopApp extends StatelessWidget {
         '/discount': (context) => const DiscountPage(),
         '/sale': (context) => const SalePage(),
         '/personalisation': (context) => const PersonalisationPage(),
+        '/cart': (context) => const CartPage(),
+
       },
     );
   }
