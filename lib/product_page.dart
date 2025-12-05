@@ -14,6 +14,9 @@ class ProductPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+final imagePath =
+    ModalRoute.of(context)?.settings.arguments as String?;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -148,8 +151,8 @@ class ProductPage extends StatelessWidget {
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8),
-                      child: Image.network(
-                        'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                      child: Image.asset(
+                        imagePath ?? 'assets/images/Classic Sweatshirt.png',
                         fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) {
                           return Container(
@@ -181,7 +184,7 @@ class ProductPage extends StatelessWidget {
 
                   // Product name
                   const Text(
-                    'Placeholder Product Name',
+                    'Classic Sweatshirt',
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
