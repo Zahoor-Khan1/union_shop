@@ -214,6 +214,22 @@ class ProductPage extends StatelessWidget {
   ],
   onChanged: (value) {},
 ),
+const SizedBox(height: 16),
+
+DropdownButtonFormField<String>(
+  value: 'M',
+  decoration: const InputDecoration(
+    labelText: 'Size',
+    border: OutlineInputBorder(),
+  ),
+  items: const [
+    DropdownMenuItem(value: 'S', child: Text('S')),
+    DropdownMenuItem(value: 'M', child: Text('M')),
+    DropdownMenuItem(value: 'L', child: Text('L')),
+  ],
+  onChanged: (value) {},
+),
+
 
 
 
