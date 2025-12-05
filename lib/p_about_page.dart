@@ -103,6 +103,19 @@ const Padding(
   ),
 ),
 
+const SizedBox(height: 12),
+
+const Padding(
+  padding: EdgeInsets.symmetric(horizontal: 24),
+  child: Text(
+    "Customising your gear won’t break the bank - just £3 for one line of text or a small chest logo, and £5 for two lines or a large back logo. Turnaround time is up to three working days, and we’ll let you know as soon as it’s ready to collect.",
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      fontSize: 16,
+      height: 1.6,
+    ),
+  ),
+),
 
         ],
       ),
