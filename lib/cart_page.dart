@@ -34,7 +34,23 @@ class _CartPageState extends State<CartPage> {
                       return ListTile(
                         leading: Image.asset(item.image, width: 50),
                         title: Text(item.name),
-                        subtitle: Text(item.price),
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(item.price),
+                            const SizedBox(height: 4),
+                            SizedBox(
+                              width: 60,
+                              child: TextFormField(
+                                initialValue: item.quantity.toString(),
+                                keyboardType: TextInputType.number,
+                                onChanged: (value) {
+                                  item.quantity = int.tryParse(value) ?? 1;
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
                         trailing: IconButton(
                           icon: const Icon(Icons.delete),
                           onPressed: () {
@@ -47,7 +63,6 @@ class _CartPageState extends State<CartPage> {
                     },
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsets.all(16),
                   child: Text(
@@ -58,7 +73,6 @@ class _CartPageState extends State<CartPage> {
                     ),
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsets.all(16),
                   child: SizedBox(
