@@ -58,13 +58,16 @@ class AppHeader extends StatelessWidget {
                           },
                         ),
                       )
-                    : Row(
+                    : Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
                         children: [
                           Image.network(
                             'https://shop.upsu.net/cdn/shop/files/upsu_300x300.png?v=1614735854',
                             height: 18,
                             fit: BoxFit.cover,
                           ),
+                          Row(children: [
+
                           TextButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/');
@@ -185,6 +188,7 @@ class AppHeader extends StatelessWidget {
                             ),
                             onPressed: () {},
                           ),
+                          ]),
                         ],
                       ),
               ),

@@ -9,9 +9,12 @@ class CollectionsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
         title: const Text('Collections'),
       ),
-      body: Padding(
+      body: SingleChildScrollView(
+  child: Padding(
+
         padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,6 +55,7 @@ class CollectionsPage extends StatelessWidget {
             const AppFooter()
           ],
         ),
+      ),
       ),
     );
   }

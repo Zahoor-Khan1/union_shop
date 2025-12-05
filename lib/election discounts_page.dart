@@ -17,9 +17,14 @@ body: Padding(
           crossAxisSpacing: 16,
           mainAxisSpacing: 16,
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+            GestureDetector(
+  onTap: () {
+    Navigator.pushNamed(context, '/product');
+  },
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+
                 Expanded(
                   child: Image.asset(
                     'assets/images/Classic Sweatshirt.png',
@@ -37,6 +42,7 @@ body: Padding(
                   style: TextStyle(fontSize: 13, color: Colors.grey),
                 ),
               ],
+            ),
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
