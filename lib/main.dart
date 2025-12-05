@@ -195,7 +195,19 @@ class HomeScreen extends StatelessWidget {
                                'assets/images/signature Tshirt.png',
                         ),
                       ],
-                    ),
+                    ),const SizedBox(height: 60),
+
+const Text(
+  'SIGNATURE RANGE',
+  style: TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  ),
+),
+
+const SizedBox(height: 32),
+
                   ],
                 ),
               ),
