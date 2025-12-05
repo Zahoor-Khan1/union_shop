@@ -7,7 +7,11 @@ class PrintShackAboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
   body: SingleChildScrollView(
-    child: Column(
+  child: Center(
+    child: SizedBox(
+      width: 800,
+      child: Column(
+
       children: [
         const SizedBox(height: 40),
 
@@ -62,10 +66,12 @@ const Padding(
 ),
 
 
-
-      ]
-    )
+        ],
+      ),
+    ),
   ),
+),
+
     );
   
   }
