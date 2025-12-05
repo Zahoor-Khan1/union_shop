@@ -217,6 +217,7 @@ class ProductPage extends StatelessWidget {
     onChanged: (value) {},
   ),
 ),
+const SizedBox(height: 24),
 
 SizedBox(
   width: 200,
@@ -234,6 +235,8 @@ SizedBox(
     onChanged: (value) {},
   ),
 ),
+const SizedBox(height: 24),
+
 
 SizedBox(
   width: 150,
@@ -245,6 +248,7 @@ SizedBox(
     ),
   ),
 ),
+
 
 
 
