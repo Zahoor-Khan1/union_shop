@@ -129,6 +129,20 @@ const Padding(
     ),
   ),
 ),
+const SizedBox(height: 12),
+
+const Padding(
+  padding: EdgeInsets.symmetric(horizontal: 24),
+  child: Text(
+    "We will print your clothing exactly as you have provided it to us, whether online or in person. We are not responsible for any spelling errors. Please ensure your chosen text is clearly displayed in either capitals or lowercase. Refunds are not provided for any personalised items.",
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      fontSize: 15,
+      color: Colors.black,
+      height: 1.6,
+    ),
+  ),
+),
 
         ],
       ),

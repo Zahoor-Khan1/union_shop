@@ -16,37 +16,35 @@ class PersonalisationPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                height: 260,
+              Image.asset(
+                'assets/images/p_about_page.png',
+                height: 200,
                 width: double.infinity,
-                color: Colors.grey[300],
-                child: const Center(
-                  child: Text('Product Image'),
-                ),
+                fit: BoxFit.cover,
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 'Personalisation',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 8),
-              Text(
+              const SizedBox(height: 8),
+              const Text(
                 '£3.00',
                 style: TextStyle(fontSize: 18, color: Colors.grey),
               ),
-              SizedBox(height: 16),
-              Text(
+              const SizedBox(height: 16),
+              const Text(
                 '£3 for one line of text! £5 for two!',
                 style: TextStyle(color: Colors.grey),
               ),
-              SizedBox(height: 8),
-              Text(
+              const SizedBox(height: 8),
+              const Text(
                 'One line of text is 10 characters.',
                 style: TextStyle(color: Colors.grey),
               ),
-              SizedBox(height: 20),
-              Text('Per Line'),
-              SizedBox(height: 6),
+              const SizedBox(height: 20),
+              const Text('Per Line'),
+              const SizedBox(height: 6),
               DropdownButtonFormField<String>(
                 items: const [
                   DropdownMenuItem(
@@ -59,20 +57,20 @@ class PersonalisationPage extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 20),
-              Text('Personalisation Line 1'),
-              SizedBox(height: 6),
-              TextField(
-                decoration: const InputDecoration(
+              const SizedBox(height: 20),
+              const Text('Personalisation Line 1'),
+              const SizedBox(height: 6),
+              const TextField(
+                decoration: InputDecoration(
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 16),
-              Text(
+              const SizedBox(height: 16),
+              const Text(
                 'Please ensure all spellings are correct before submitting your purchase as we will print your item exactly as provided. Personalised items do not qualify for refunds.',
                 style: TextStyle(color: Colors.grey, height: 1.5),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               SizedBox(
                 width: double.infinity,
                 height: 48,
