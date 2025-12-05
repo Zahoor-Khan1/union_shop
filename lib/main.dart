@@ -160,7 +160,7 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     const Text(
-                      'PRODUCTS SECTION',
+                      'ESSENTIAL RANGE - OVER 20% OFF!',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
@@ -177,16 +177,16 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSpacing: 48,
                       children: const [
                         ProductCard(
-                          title: 'Essential Zip Hoodies',
+                          title: 'Limited Edition Essential Hoodies',
                           price: '£14.99',
                           imageUrl:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                              'assets/images/zip_hoodie.png',
                         ),
                         ProductCard(
                           title: 'Essential T-Shirt',
                           price: '£10.00',
                           imageUrl:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                             'assets/images/uop shirt.png',
                         ),
                         ProductCard(
                           title: 'Signature Hoodie',
@@ -238,9 +238,10 @@ class ProductCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            child: Image.network(
-              imageUrl,
-              fit: BoxFit.cover,
+  child: Image.asset(
+    imageUrl,
+    fit: BoxFit.cover,
+
               errorBuilder: (context, error, stackTrace) {
                 return Container(
                   color: Colors.grey[300],
