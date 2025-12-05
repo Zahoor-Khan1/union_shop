@@ -85,8 +85,8 @@ class HomeScreen extends StatelessWidget {
                     child: Container(
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                          image: NetworkImage(
-                            'https://shop.upsu.net/cdn/shop/files/PortsmouthCityPostcard2_1024x1024@2x.jpg?v=1752232561',
+                          image: AssetImage(
+                            'assets/images/personalisation.png',
                           ),
                           fit: BoxFit.cover,
                         ),
@@ -183,7 +183,6 @@ class HomeScreen extends StatelessWidget {
                           price: '£10.00',
                           imageUrl: 'assets/images/uop shirt.png',
                         ),
-                        
                       ],
                     ),
                     const SizedBox(height: 60),
@@ -217,39 +216,35 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 60),
-
-const Text(
-  'PORTSMOUTH CITY COLLECTION',
-  style: TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.bold,
-    color: Colors.black,
-  ),
-),
-
-GridView.count(
-  shrinkWrap: true,
-  physics: const NeverScrollableScrollPhysics(),
-  crossAxisCount:
-      MediaQuery.of(context).size.width > 600 ? 2 : 1,
-  crossAxisSpacing: 24,
-  mainAxisSpacing: 48,
-  children: const [
-    ProductCard(
-      title: 'Portsmouth City Postcard',
-      price: '£1.99',
-      imageUrl: 'assets/images/portsmouth city postcard.png',
-    ),
-    ProductCard(
-      title: 'Portsmouth City Magnet',
-      price: '£3.99',
-      imageUrl: 'assets/images/p magnet.png',
-    ),
-  ],
-),
-
-
-
+                    const Text(
+                      'PORTSMOUTH CITY COLLECTION',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                    GridView.count(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      crossAxisCount:
+                          MediaQuery.of(context).size.width > 600 ? 2 : 1,
+                      crossAxisSpacing: 24,
+                      mainAxisSpacing: 48,
+                      children: const [
+                        ProductCard(
+                          title: 'Portsmouth City Postcard',
+                          price: '£1.99',
+                          imageUrl:
+                              'assets/images/portsmouth city postcard.png',
+                        ),
+                        ProductCard(
+                          title: 'Portsmouth City Magnet',
+                          price: '£3.99',
+                          imageUrl: 'assets/images/p magnet.png',
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
