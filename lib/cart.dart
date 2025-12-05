@@ -10,4 +10,4 @@ class CartItem {
   });
 }
 
-List<CartItem> cartItems = [];
+List<CartItem> cartItem = [];
