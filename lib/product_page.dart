@@ -229,6 +229,15 @@ DropdownButtonFormField<String>(
   ],
   onChanged: (value) {},
 ),
+const SizedBox(height: 16),
+
+TextFormField(
+  initialValue: '1',
+  decoration: const InputDecoration(
+    labelText: 'Quantity',
+    border: OutlineInputBorder(),
+  ),
+),
 
 
 
