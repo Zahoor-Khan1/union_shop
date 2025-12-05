@@ -105,4 +105,4 @@ Fully responsive layout
 
 Testing has been implemented:
 
-All tests pass successfully.
+Almost all of tests  passed successfully.
