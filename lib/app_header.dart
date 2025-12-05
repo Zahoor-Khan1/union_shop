@@ -27,7 +27,16 @@ class AppHeader extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10),
 child: SingleChildScrollView(
   scrollDirection: Axis.horizontal,
-  child: Row(
+  child: isMobile
+    ? Align(
+        alignment: Alignment.centerRight,
+        child: IconButton(
+          icon: const Icon(Icons.menu, color: Colors.grey),
+          onPressed: () {},
+        ),
+      )
+    : Row(
+
                 children: [
                   Image.network(
                     'https://shop.upsu.net/cdn/shop/files/upsu_300x300.png?v=1614735854',
