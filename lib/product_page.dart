@@ -200,6 +200,9 @@ class ProductPage extends StatelessWidget {
                       color: Color(0xFF4d2963),
                     ),
                   ),
+                  const SizedBox(height: 20),
+                  
+
 
                   const SizedBox(height: 24),
 
