@@ -12,7 +12,6 @@ import 'package:union_shop/footer.dart';
 import 'package:union_shop/sale_page.dart';
 import 'package:union_shop/cart_page.dart';
 
-
 void main() {
   runApp(const UnionShopApp());
 }
@@ -41,7 +40,6 @@ class UnionShopApp extends StatelessWidget {
         '/sale': (context) => const SalePage(),
         '/personalisation': (context) => const PersonalisationPage(),
         '/cart': (context) => const CartPage(),
-
       },
     );
   }
@@ -76,7 +74,6 @@ class HomeScreen extends StatelessWidget {
           children: [
             const AppHeader(),
 
-         
             // Hero Section
             SizedBox(
               height: 400,
@@ -179,26 +176,23 @@ class HomeScreen extends StatelessWidget {
                         ProductCard(
                           title: 'Limited Edition Essential Hoodies',
                           price: '£14.99',
-                          imageUrl:
-                              'assets/images/zip_hoodie.png',
+                          imageUrl: 'assets/images/zip_hoodie.png',
                         ),
                         ProductCard(
                           title: 'Essential T-Shirt',
                           price: '£10.00',
-                          imageUrl:
-                             'assets/images/uop shirt.png',
+                          imageUrl: 'assets/images/uop shirt.png',
                         ),
                         ProductCard(
                           title: 'Signature Hoodie',
                           price: '£32.99',
-                          imageUrl:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                          imageUrl: 'assets/images/signature hoodie.png',
                         ),
                         ProductCard(
                           title: 'Signature T-Shirt',
                           price: '£14.99',
                           imageUrl:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                               'assets/images/signature Tshirt.png',
                         ),
                       ],
                     ),
@@ -238,10 +232,9 @@ class ProductCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-  child: Image.asset(
-    imageUrl,
-    fit: BoxFit.cover,
-
+            child: Image.asset(
+              imageUrl,
+              fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
                 return Container(
                   color: Colors.grey[300],
