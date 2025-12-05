@@ -216,6 +216,19 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ],
                     ),
+                    const SizedBox(height: 60),
+
+const Text(
+  'PORTSMOUTH CITY COLLECTION',
+  style: TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  ),
+),
+
+const SizedBox(height: 24),
+
                   ],
                 ),
               ),
