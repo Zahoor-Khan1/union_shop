@@ -9,13 +9,15 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
-  double getTotal() {
-    double total = 0;
-    for (var item in cartItems) {
-      total += double.parse(item.price.replaceFirst('£', ''));
-    }
-    return total;
+double getTotal() {
+  double total = 0;
+  for (var item in cartItems) {
+    total +=
+        double.parse(item.price.replaceFirst('£', '')) * item.quantity;
   }
+  return total;
+}
+
 
   @override
   Widget build(BuildContext context) {
