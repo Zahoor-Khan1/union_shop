@@ -8,9 +8,23 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Your Cart')),
-      body: const Center(
-        child: Text('Cart is empty'),
+      body: cartItems.isEmpty
+    ? const Center(
+        child: Text('Your cart is empty'),
+      )
+    : ListView.builder(
+        itemCount: cartItems.length,
+        itemBuilder: (context, index) {
+          final item = cartItems[index];
+
+          return ListTile(
+            leading: Image.asset(item.image, width: 50),
+            title: Text(item.name),
+            subtitle: Text(item.price),
+          );
+        },
       ),
+
     );
   }
 }
