@@ -183,6 +183,27 @@ class HomeScreen extends StatelessWidget {
                           price: '£10.00',
                           imageUrl: 'assets/images/uop shirt.png',
                         ),
+                        
+                      ],
+                    ),
+                    const SizedBox(height: 60),
+                    const Text(
+                      'SIGNATURE RANGE',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                    const SizedBox(height: 32),
+                    GridView.count(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      crossAxisCount:
+                          MediaQuery.of(context).size.width > 600 ? 2 : 1,
+                      crossAxisSpacing: 24,
+                      mainAxisSpacing: 48,
+                      children: const [
                         ProductCard(
                           title: 'Signature Hoodie',
                           price: '£32.99',
@@ -191,23 +212,10 @@ class HomeScreen extends StatelessWidget {
                         ProductCard(
                           title: 'Signature T-Shirt',
                           price: '£14.99',
-                          imageUrl:
-                               'assets/images/signature Tshirt.png',
+                          imageUrl: 'assets/images/signature Tshirt.png',
                         ),
                       ],
-                    ),const SizedBox(height: 60),
-
-const Text(
-  'SIGNATURE RANGE',
-  style: TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.bold,
-    color: Colors.black,
-  ),
-),
-
-const SizedBox(height: 32),
-
+                    ),
                   ],
                 ),
               ),
