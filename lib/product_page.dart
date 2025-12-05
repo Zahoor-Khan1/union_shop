@@ -248,6 +248,16 @@ SizedBox(
     ),
   ),
 ),
+const SizedBox(height: 24),
+
+SizedBox(
+  width: double.infinity,
+  child: ElevatedButton(
+    onPressed: () {},
+    child: const Text('ADD TO CART'),
+  ),
+),
+
 
 
 
