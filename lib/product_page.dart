@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:union_shop/footer.dart';
+import 'package:union_shop/cart.dart';
 
 class ProductPage extends StatelessWidget {
   const ProductPage({super.key});
@@ -253,13 +254,25 @@ class ProductPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 24),
 
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: const Text('ADD TO CART'),
-                    ),
-                  ),
+                 SizedBox(
+  width: double.infinity,
+  child: ElevatedButton(
+    onPressed: () {
+      cartItem.add(
+        CartItem(
+          name: 'Classic Sweatshirt',
+          price: '15.00',
+          image: imagePath ?? 'assets/images/Classic Sweatshirt.png',
+        ),
+      );
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Added to cart')),
+      );
+    },
+    child: const Text('ADD TO CART'),
+  ),
+),
 
                   const SizedBox(height: 24),
 
@@ -287,9 +300,9 @@ class ProductPage extends StatelessWidget {
 
             // Footer
             const AppFooter(),
-          ],
-        ),
-      ),
-    );
-  }
+],
+),
+),
+);
+}
 }
