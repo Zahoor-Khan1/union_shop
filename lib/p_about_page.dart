@@ -48,6 +48,20 @@ const Padding(
     ),
   ),
 ),
+const SizedBox(height: 12),
+
+const Padding(
+  padding: EdgeInsets.symmetric(horizontal: 24),
+  child: Text(
+    "Want to add a personal touch? We’ve got you covered with heat-pressed customisation on all our clothing. Swing by the shop - our team’s always happy to help you pick the right gear and answer any questions.",
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      fontSize: 16,
+      height: 1.6,
+    ),
+  ),
+),
+
 
 
 
