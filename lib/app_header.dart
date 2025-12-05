@@ -53,7 +53,7 @@ class AppHeader extends StatelessWidget {
                               if (value == 'sale')
                                 Navigator.pushNamed(context, '/sale');
                               if (value == 'about_print') {
-                                Navigator.pushNamed(context, '/p-about');
+                                Navigator.pushNamed(context, '/print-shack-about');
                               }
                             });
                           },
@@ -113,7 +113,7 @@ class AppHeader extends StatelessWidget {
                             PopupMenuButton<String>(
                               onSelected: (value) {
                                 if (value == 'about_print') {
-                                  Navigator.pushNamed(context, '/p-about');
+                                  Navigator.pushNamed(context, '/print-shack-about');
                                 }
                                 if (value == 'personalisation') {
                                   Navigator.pushNamed(

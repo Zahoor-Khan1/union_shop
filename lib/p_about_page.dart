@@ -29,46 +29,32 @@ Padding(
   child: LayoutBuilder(
     builder: (context, constraints) {
       return Image.asset(
-        'assets/images/print1.png',
+        'assets/images/p_about_page.png',
         width: constraints.maxWidth > 900 ? 700 : 320,
         fit: BoxFit.cover,
       );
       
-    },
+      },
   ),
-),const SizedBox(height: 24),
-
+),
 const Padding(
   padding: EdgeInsets.symmetric(horizontal: 24),
   child: Text(
-    'The Union Print Shack is your one-stop shop for custom printing at the University of Portsmouth. We specialise in high-quality personalised clothing, merchandise and promotional materials for students and societies.',
+    'Make It Yours at The Union Print Shack',
     textAlign: TextAlign.center,
     style: TextStyle(
-      fontSize: 16,
-      color: Colors.black87,
-      height: 1.6,
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
     ),
   ),
 ),
-const SizedBox(height: 16),
 
-const Padding(
-  padding: EdgeInsets.symmetric(horizontal: 32),
-  child: Text(
-    'From hoodies and t-shirts to posters and banners, we help bring your ideas to life with fast turnaround and affordable prices.',
-    textAlign: TextAlign.center,
-    style: TextStyle(
-      fontSize: 15,
-      color: Colors.grey,
-      height: 1.5,
-    ),
-  ),
-),
 
 
         ],
       ),
     ),
+    
   ),
 ),
 
