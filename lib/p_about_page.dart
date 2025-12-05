@@ -46,6 +46,21 @@ const Padding(
     ),
   ),
 ),
+const SizedBox(height: 16),
+
+const Padding(
+  padding: EdgeInsets.symmetric(horizontal: 32),
+  child: Text(
+    'From hoodies and t-shirts to posters and banners, we help bring your ideas to life with fast turnaround and affordable prices.',
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      fontSize: 15,
+      color: Colors.grey,
+      height: 1.5,
+    ),
+  ),
+),
+
 
 
       ]
