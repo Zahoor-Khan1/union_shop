@@ -5,13 +5,13 @@ class PrintShackAboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
   body: SingleChildScrollView(
     child: Column(
       children: [
-        SizedBox(height: 40),
+        const SizedBox(height: 40),
 
-        Text(
+        const Text(
           'The Union Print Shack',
           style: TextStyle(
             fontSize: 26,
@@ -20,19 +20,34 @@ class PrintShackAboutPage extends StatelessWidget {
         ),
                 const SizedBox(height: 40),
 
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Image(
-                image: AssetImage('assets/images/p_about_page.png'),
-                width: 140,
-                fit: BoxFit.cover,
-              ),
-      ],
+Padding(
+  padding: const EdgeInsets.symmetric(horizontal: 24),
+  child: LayoutBuilder(
+    builder: (context, constraints) {
+      return Image.asset(
+        'assets/images/print1.png',
+        width: constraints.maxWidth > 900 ? 700 : 320,
+        fit: BoxFit.cover,
+      );
+      
+    },
+  ),
+),const SizedBox(height: 24),
+
+const Padding(
+  padding: EdgeInsets.symmetric(horizontal: 24),
+  child: Text(
+    'The Union Print Shack is your one-stop shop for custom printing at the University of Portsmouth. We specialise in high-quality personalised clothing, merchandise and promotional materials for students and societies.',
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      fontSize: 16,
+      color: Colors.black87,
+      height: 1.6,
     ),
   ),
+),
+
+
       ]
     )
   ),
