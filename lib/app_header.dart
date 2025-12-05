@@ -52,14 +52,15 @@ class AppHeader extends StatelessWidget {
                                 Navigator.pushNamed(context, '/');
                               if (value == 'sale')
                                 Navigator.pushNamed(context, '/sale');
-                              if (value == 'about')
-                                Navigator.pushNamed(context, '/about');
+                              if (value == 'about_print') {
+                                Navigator.pushNamed(context, '/p-about');
+                              }
                             });
                           },
                         ),
                       )
-                    : Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
+                    : Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Image.network(
                             'https://shop.upsu.net/cdn/shop/files/upsu_300x300.png?v=1614735854',
@@ -67,127 +68,126 @@ class AppHeader extends StatelessWidget {
                             fit: BoxFit.cover,
                           ),
                           Row(children: [
-
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/');
-                            },
-                            child: const Text(
-                              'Home',
-                              style: TextStyle(color: Colors.grey),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/');
+                              },
+                              child: const Text(
+                                'Home',
+                                style: TextStyle(color: Colors.grey),
+                              ),
                             ),
-                          ),
-                          const SizedBox(width: 16),
-                          PopupMenuButton<String>(
-                            onSelected: (value) {
-                              if (value == 'pride') {
-                                Navigator.pushNamed(context, '/pride');
-                              }
-                              if (value == 'graduation') {
-                                Navigator.pushNamed(context, '/graduation');
-                              }
-                              if (value == 'essential') {
-                                Navigator.pushNamed(context, '/essential');
-                              }
-                            },
-                            itemBuilder: (context) => const [
-                              PopupMenuItem(
-                                value: 'pride',
-                                child: Text('Pride Collection'),
+                            const SizedBox(width: 16),
+                            PopupMenuButton<String>(
+                              onSelected: (value) {
+                                if (value == 'pride') {
+                                  Navigator.pushNamed(context, '/pride');
+                                }
+                                if (value == 'graduation') {
+                                  Navigator.pushNamed(context, '/graduation');
+                                }
+                                if (value == 'essential') {
+                                  Navigator.pushNamed(context, '/essential');
+                                }
+                              },
+                              itemBuilder: (context) => const [
+                                PopupMenuItem(
+                                  value: 'pride',
+                                  child: Text('Pride Collection'),
+                                ),
+                                PopupMenuItem(
+                                  value: 'graduation',
+                                  child: Text('Graduation'),
+                                ),
+                                PopupMenuItem(
+                                  value: 'essential',
+                                  child: Text('Essential Range'),
+                                ),
+                              ],
+                              child: const Text(
+                                'Shop',
+                                style: TextStyle(color: Colors.grey),
                               ),
-                              PopupMenuItem(
-                                value: 'graduation',
-                                child: Text('Graduation'),
-                              ),
-                              PopupMenuItem(
-                                value: 'essential',
-                                child: Text('Essential Range'),
-                              ),
-                            ],
-                            child: const Text(
-                              'Shop',
-                              style: TextStyle(color: Colors.grey),
                             ),
-                          ),
-                          const SizedBox(width: 16),
-                          PopupMenuButton<String>(
-                            onSelected: (value) {
-                              if (value == 'about_print') {
+                            const SizedBox(width: 16),
+                            PopupMenuButton<String>(
+                              onSelected: (value) {
+                                if (value == 'about_print') {
+                                  Navigator.pushNamed(context, '/about');
+                                }
+                                if (value == 'personalisation') {
+                                  Navigator.pushNamed(
+                                      context, '/personalisation');
+                                }
+                              },
+                              itemBuilder: (context) => const [
+                                PopupMenuItem(
+                                  value: 'about_print',
+                                  child: Text('About'),
+                                ),
+                                PopupMenuItem(
+                                  value: 'personalisation',
+                                  child: Text('Personalisation'),
+                                ),
+                              ],
+                              child: const Text(
+                                'The Print Shack',
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            ),
+                            const SizedBox(width: 16),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/sale');
+                              },
+                              child: const Text(
+                                'SALE!',
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            ),
+                            const SizedBox(width: 16),
+                            TextButton(
+                              onPressed: () {
                                 Navigator.pushNamed(context, '/about');
-                              }
-                              if (value == 'personalisation') {
-                                Navigator.pushNamed(
-                                    context, '/personalisation');
-                              }
-                            },
-                            itemBuilder: (context) => const [
-                              PopupMenuItem(
-                                value: 'about_print',
-                                child: Text('About'),
+                              },
+                              child: const Text(
+                                'About',
+                                style: TextStyle(color: Colors.grey),
                               ),
-                              PopupMenuItem(
-                                value: 'personalisation',
-                                child: Text('Personalisation'),
+                            ),
+                            const SizedBox(width: 8),
+                            IconButton(
+                              icon: const Icon(
+                                Icons.search,
+                                size: 18,
+                                color: Colors.grey,
                               ),
-                            ],
-                            child: const Text(
-                              'The Print Shack',
-                              style: TextStyle(color: Colors.grey),
+                              onPressed: () {},
                             ),
-                          ),
-                          const SizedBox(width: 16),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/sale');
-                            },
-                            child: const Text(
-                              'SALE!',
-                              style: TextStyle(color: Colors.grey),
+                            IconButton(
+                              icon: const Icon(
+                                Icons.person_outline,
+                                size: 18,
+                                color: Colors.grey,
+                              ),
+                              onPressed: () {},
                             ),
-                          ),
-                          const SizedBox(width: 16),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/about');
-                            },
-                            child: const Text(
-                              'About',
-                              style: TextStyle(color: Colors.grey),
+                            IconButton(
+                              icon: const Icon(
+                                Icons.shopping_bag_outlined,
+                                size: 18,
+                                color: Colors.grey,
+                              ),
+                              onPressed: () {},
                             ),
-                          ),
-                          const SizedBox(width: 8),
-                         IconButton( 
-                            icon: const Icon(
-                              Icons.search,
-                              size: 18,
-                              color: Colors.grey,
+                            IconButton(
+                              icon: const Icon(
+                                Icons.menu,
+                                size: 18,
+                                color: Colors.grey,
+                              ),
+                              onPressed: () {},
                             ),
-                            onPressed: () {},
-                          ),
-                          IconButton(
-                            icon: const Icon(
-                              Icons.person_outline,
-                              size: 18,
-                              color: Colors.grey,
-                            ),
-                            onPressed: () {},
-                          ),
-                          IconButton(
-                            icon: const Icon(
-                              Icons.shopping_bag_outlined,
-                              size: 18,
-                              color: Colors.grey,
-                            ),
-                            onPressed: () {},
-                          ),
-                          IconButton(
-                            icon: const Icon(
-                              Icons.menu,
-                              size: 18,
-                              color: Colors.grey,
-                            ),
-                            onPressed: () {},
-                          ),
                           ]),
                         ],
                       ),
