@@ -264,6 +264,7 @@ class ProductPage extends StatelessWidget {
                             price: '15.00',
                             image: imagePath ??
                                 'assets/images/Classic Sweatshirt.png',
+                                quantity: 1,
                           ),
                         );
 
