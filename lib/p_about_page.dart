@@ -6,9 +6,22 @@ class PrintShackAboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text('Print Shack About Page'),
-      ),
-    );
+  body: SingleChildScrollView(
+    child: Column(
+      children: [
+        SizedBox(height: 40),
+
+        Text(
+          'The Union Print Shack',
+          style: TextStyle(
+            fontSize: 26,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    ),
+  ),
+);
+
   }
 }
