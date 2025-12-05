@@ -82,9 +82,7 @@ class ProductPage extends StatelessWidget {
                                     minWidth: 32,
                                     minHeight: 32,
                                   ),
-                                  onPressed: () {
-                                    Navigator.pushNamed(context, '/cart');
-                                  },
+                                  onPressed: placeholderCallbackForButtons,
                                 ),
                                 IconButton(
                                   icon: const Icon(
@@ -110,7 +108,9 @@ class ProductPage extends StatelessWidget {
                                     minWidth: 32,
                                     minHeight: 32,
                                   ),
-                                  onPressed: placeholderCallbackForButtons,
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/cart');
+                                  },
                                 ),
                                 IconButton(
                                   icon: const Icon(
@@ -254,25 +254,26 @@ class ProductPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 24),
 
-                 SizedBox(
-  width: double.infinity,
-  child: ElevatedButton(
-    onPressed: () {
-      cartItem.add(
-        CartItem(
-          name: 'Classic Sweatshirt',
-          price: '15.00',
-          image: imagePath ?? 'assets/images/Classic Sweatshirt.png',
-        ),
-      );
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        cartItems.add(
+                          CartItem(
+                            name: 'Classic Sweatshirt',
+                            price: '15.00',
+                            image: imagePath ??
+                                'assets/images/Classic Sweatshirt.png',
+                          ),
+                        );
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Added to cart')),
-      );
-    },
-    child: const Text('ADD TO CART'),
-  ),
-),
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(content: Text('Added to cart')),
+                        );
+                      },
+                      child: const Text('ADD TO CART'),
+                    ),
+                  ),
 
                   const SizedBox(height: 24),
 
@@ -300,9 +301,9 @@ class ProductPage extends StatelessWidget {
 
             // Footer
             const AppFooter(),
-],
-),
-),
-);
-}
+          ],
+        ),
+      ),
+    );
+  }
 }
