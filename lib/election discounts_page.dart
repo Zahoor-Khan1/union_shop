@@ -19,7 +19,11 @@ body: Padding(
           children: [
             GestureDetector(
   onTap: () {
-    Navigator.pushNamed(context, '/product');
+Navigator.pushNamed(
+  context,
+  '/product',
+  arguments: 'assets/images/Classic Sweatshirt.png',
+);
   },
   child: Column(
     crossAxisAlignment: CrossAxisAlignment.start,
