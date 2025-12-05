@@ -116,6 +116,19 @@ const Padding(
     ),
   ),
 ),
+const SizedBox(height: 32),
+
+const Padding(
+  padding: EdgeInsets.symmetric(horizontal: 24),
+  child: Text(
+    'Personalisation Terms & Conditions',
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+    ),
+  ),
+),
 
         ],
       ),
