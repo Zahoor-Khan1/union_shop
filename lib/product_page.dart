@@ -201,19 +201,23 @@ class ProductPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  DropdownButtonFormField<String>(
-  value: 'Black',
-  decoration: const InputDecoration(
-    labelText: 'Color',
-    border: OutlineInputBorder(),
+                  SizedBox(
+  width: 150,
+  child: DropdownButtonFormField<String>(
+    value: 'Black',
+    decoration: const InputDecoration(
+      labelText: 'Color',
+      border: OutlineInputBorder(),
+    ),
+    items: const [
+      DropdownMenuItem(value: 'Black', child: Text('Black')),
+      DropdownMenuItem(value: 'Blue', child: Text('Blue')),
+      DropdownMenuItem(value: 'Grey', child: Text('Grey')),
+    ],
+    onChanged: (value) {},
   ),
-  items: const [
-    DropdownMenuItem(value: 'Black', child: Text('Black')),
-    DropdownMenuItem(value: 'Blue', child: Text('Blue')),
-    DropdownMenuItem(value: 'Grey', child: Text('Grey')),
-  ],
-  onChanged: (value) {},
 ),
+
 const SizedBox(height: 16),
 
 DropdownButtonFormField<String>(
@@ -229,15 +233,17 @@ DropdownButtonFormField<String>(
   ],
   onChanged: (value) {},
 ),
-const SizedBox(height: 16),
-
-TextFormField(
-  initialValue: '1',
-  decoration: const InputDecoration(
-    labelText: 'Quantity',
-    border: OutlineInputBorder(),
+SizedBox(
+  width: 150,
+  child: TextFormField(
+    initialValue: '1',
+    decoration: const InputDecoration(
+      labelText: 'Quantity',
+      border: OutlineInputBorder(),
+    ),
   ),
 ),
+
 
 
 
