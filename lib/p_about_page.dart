@@ -18,10 +18,27 @@ class PrintShackAboutPage extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+                const SizedBox(height: 40),
+
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Image(
+                image: AssetImage('assets/images/p_about_page.png'),
+                width: 140,
+                fit: BoxFit.cover,
+              ),
       ],
     ),
   ),
-);
-
+      ]
+    )
+  ),
+    );
+  
   }
+
 }
+
