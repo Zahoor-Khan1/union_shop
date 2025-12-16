@@ -77,6 +77,32 @@ const Row(
     Expanded(child: Divider()),
   ],
 ),
+const SizedBox(height: 24),
+
+const TextField(
+  decoration: InputDecoration(
+    labelText: 'Email',
+    border: OutlineInputBorder(),
+  ),
+),
+
+const SizedBox(height: 16),
+
+SizedBox(
+  height: 48,
+  child: OutlinedButton(
+    onPressed: () {},
+    style: OutlinedButton.styleFrom(
+      foregroundColor: Colors.grey,
+      side: const BorderSide(color: Colors.grey),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+    ),
+    child: const Text('Continue'),
+  ),
+),
+
 
   ],
 ),
