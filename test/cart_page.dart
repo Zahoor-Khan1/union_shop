@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:union_shop/cart_page.dart';
-import 'package:union_shop/cart.dart';
+import 'package:union_shop/views/cart_page.dart';
+import 'package:union_shop/models/cart.dart';
 
 void main() {
   group('Cart Page Tests', () {

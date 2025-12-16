@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:union_shop/pride_page.dart';
+import 'package:union_shop/views/pride_page.dart';
 
 void main() {
   group('Pride Page Tests', () {

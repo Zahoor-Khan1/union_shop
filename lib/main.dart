@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:union_shop/app_header.dart';
-import 'package:union_shop/p_about_page.dart';
-import 'package:union_shop/personalisation_page.dart';
-import 'package:union_shop/product_page.dart';
-import 'package:union_shop/about_page.dart';
-import 'package:union_shop/collections_page.dart';
-import 'package:union_shop/graduation_page.dart';
-import 'package:union_shop/essential_range_page.dart';
-import 'package:union_shop/pride_page.dart';
-import 'package:union_shop/election discounts_page.dart';
-import 'package:union_shop/footer.dart';
-import 'package:union_shop/sale_page.dart';
-import 'package:union_shop/cart_page.dart';
+import 'package:union_shop/views/app_header.dart';
+import 'package:union_shop/views/p_about_page.dart';
+import 'package:union_shop/views/personalisation_page.dart';
+import 'package:union_shop/views/product_page.dart';
+import 'package:union_shop/views/about_page.dart';
+import 'package:union_shop/views/collections_page.dart';
+import 'package:union_shop/views/graduation_page.dart';
+import 'package:union_shop/views/essential_range_page.dart';
+import 'package:union_shop/views/pride_page.dart';
+import 'package:union_shop/views/election%20discounts_page.dart';
+import 'package:union_shop/views/footer.dart';
+import 'package:union_shop/views/sale_page.dart';
+import 'package:union_shop/views/cart_page.dart';
 
 void main() {
   runApp(const UnionShopApp());

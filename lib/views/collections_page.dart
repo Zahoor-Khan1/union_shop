@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:union_shop/footer.dart';
+import 'package:union_shop/views/footer.dart';
 
 
 class CollectionsPage extends StatelessWidget {
