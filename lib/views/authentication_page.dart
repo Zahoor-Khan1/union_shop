@@ -22,10 +22,10 @@ class AuthenticationPage extends StatelessWidget {
               ),
             ],
           ),
-child: const Column(
+child: Column(
   crossAxisAlignment: CrossAxisAlignment.stretch,
   children: [
-    Text(
+    const Text(
       'The UNION',
       textAlign: TextAlign.center,
       style: TextStyle(
@@ -35,19 +35,49 @@ child: const Column(
         letterSpacing: 1.2,
       ),
     ),
-    SizedBox(height: 32),
-    Text(
+    const SizedBox(height: 32),
+    const Text(
       'Sign in',
       style: TextStyle(
         fontSize: 22,
         fontWeight: FontWeight.bold,
       ),
     ),
-    SizedBox(height: 8),
-    Text(
+    const SizedBox(height: 8),
+    const Text(
       'Sign in or create an account',
       style: TextStyle(color: Colors.grey),
     ),
+    const SizedBox(height: 24),
+
+SizedBox(
+  height: 48,
+  child: ElevatedButton(
+    onPressed: () {},
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Color(0xFF5B3BE3),
+      foregroundColor: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+    ),
+    child: const Text('Sign in with shop'),
+  ),
+),
+
+const SizedBox(height: 24),
+
+const Row(
+  children: [
+    Expanded(child: Divider()),
+    Padding(
+      padding: EdgeInsets.symmetric(horizontal: 12),
+      child: Text('or', style: TextStyle(color: Colors.grey)),
+    ),
+    Expanded(child: Divider()),
+  ],
+),
+
   ],
 ),
         ),
