@@ -31,16 +31,22 @@ final List<Map<String, String>> products = [
   Widget build(BuildContext context) {
    return Scaffold(
   appBar: AppBar(title: const Text('Search')),
-body: const Padding(
-  padding: EdgeInsets.all(16),
+body: Padding(
+  padding: const EdgeInsets.all(16),
   child: Column(
     children: [
-      TextField(
-        decoration: InputDecoration(
-          hintText: 'Search products...',
-          border: OutlineInputBorder(),
-        ),
-      ),
+Expanded(
+  child: ListView.builder(
+    itemCount: products.length,
+    itemBuilder: (context, index) {
+      final product = products[index];
+      return ListTile(
+        title: Text(product['name']!),
+        subtitle: Text(product['price']!),
+      );
+    },
+  ),
+),
     ],
   ),
 ),
