@@ -5,9 +5,15 @@ import 'package:union_shop/models/cart.dart';
 
 void main() {
   group('Cart Page Tests', () {
-    Widget createTestWidget() {
-      return const MaterialApp(home: CartPage());
-    }
+    setUp(() {
+      cartItems.clear();
+    });
+
+Widget createTestWidget() {
+  return const MaterialApp(
+    home: CartPage(),
+  );
+}
 
     testWidgets('displays empty cart message when cart is empty', (tester) async {
       // Ensure cart is empty before test

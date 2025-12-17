@@ -13,7 +13,7 @@ void main() {
 
     expect(find.byType(Scaffold), findsOneWidget);
   });
-}
+
 testWidgets('Search page displays app bar title', (tester) async {
   await tester.pumpWidget(createTestWidget());
   await tester.pump();
@@ -45,6 +45,4 @@ testWidgets('Typing filters search results', (tester) async {
   expect(find.text('Classic Hoodie'), findsOneWidget);
   expect(find.text('Essential T-Shirt'), findsNothing);
 });
-
-
-
+}
