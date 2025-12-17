@@ -9,26 +9,24 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
-double getTotal() {
-  double total = 0;
-  for (var item in cartItems) {
-    total +=
-        double.parse(item.price.replaceFirst('£', '')) * item.quantity;
+  double getTotal() {
+    double total = 0;
+    for (var item in cartItems) {
+      total += double.parse(item.price.replaceFirst('£', '')) * item.quantity;
+    }
+    return total;
   }
-  return total;
-}
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-appBar: AppBar(
-  title: const Text(
-    'Your Cart',
-    style: TextStyle(fontWeight: FontWeight.bold),
-  ),
-  centerTitle: false,
-),
+      appBar: AppBar(
+        title: const Text(
+          'Your Cart',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        centerTitle: false,
+      ),
       body: cartItems.isEmpty
           ? const Center(child: Text('Your cart is empty'))
           : Column(
@@ -39,58 +37,50 @@ appBar: AppBar(
                     itemBuilder: (context, index) {
                       final item = cartItems[index];
 
-                      return ListTile(
-                        leading: Image.asset(item.image, width: 50),
-                        title: Text(item.name),
-                        subtitle: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(item.price),
-                            const SizedBox(height: 4),
-                            Row(
-  children: [
-    IconButton(
-      icon: const Icon(Icons.remove_circle_outline),
-      onPressed: () {
-        setState(() {
-          if (item.quantity > 1) item.quantity--;
-        });
-      },
+                      return Card(
+  margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+  child: Padding(
+    padding: const EdgeInsets.all(12),
+    child: Row(
+      children: [
+        Image.asset(
+          item.image,
+          width: 80,
+          height: 80,
+          fit: BoxFit.cover,
+        ),
+        const SizedBox(width: 16),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                item.name,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(item.price),
+              const SizedBox(height: 8),
+              Text('Quantity: ${item.quantity}'),
+            ],
+          ),
+        ),
+        IconButton(
+          icon: const Icon(Icons.delete),
+          onPressed: () {
+            setState(() {
+              cartItems.removeAt(index);
+            });
+          },
+        ),
+      ],
     ),
-    Text(item.quantity.toString()),
-    IconButton(
-      icon: const Icon(Icons.add_circle_outline),
-      onPressed: () {
-        setState(() {
-          item.quantity++;
-        });
-      },
-    ),
-  ],
-),
+  ),
+);
 
-                          ],
-                        ),
-                        trailing: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            IconButton(
-                              icon: const Icon(Icons.refresh),
-                              onPressed: () {
-                                setState(() {});
-                              },
-                            ),
-                            IconButton(
-                              icon: const Icon(Icons.delete),
-                              onPressed: () {
-                                setState(() {
-                                  cartItems.removeAt(index);
-                                });
-                              },
-                            ),
-                          ],
-                        ),
-                      );
                     },
                   ),
                 ),
