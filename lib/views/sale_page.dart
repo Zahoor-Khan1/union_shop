@@ -8,10 +8,10 @@ class SalePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(children: [
-          const AppHeader(),
-          Center(
-            child: Padding(
+        child: Column(
+          children: [
+            const AppHeader(),
+            Padding(
               padding: const EdgeInsets.only(top: 40),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,53 +37,52 @@ class SalePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 32),
                   LayoutBuilder(
-  builder: (context, constraints) {
-    int columns;
+                    builder: (context, constraints) {
+                      int columns;
 
-    if (constraints.maxWidth >= 900) {
-      columns = 3;
-    } else if (constraints.maxWidth >= 600) {
-      columns = 2;
-    } else {
-      columns = 1;
-    }
+                      if (constraints.maxWidth >= 900) {
+                        columns = 3;
+                      } else if (constraints.maxWidth >= 600) {
+                        columns = 2;
+                      } else {
+                        columns = 1;
+                      }
 
-    return GridView.count(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      crossAxisCount: columns,
-      crossAxisSpacing: 24,
-      mainAxisSpacing: 32,
-      childAspectRatio: 0.72,
-      children: const [
-        _SaleProductCard(
-          title: 'Recycled Notebook',
-          oldPrice: '£17.00',
-          newPrice: '£10.99',
-          imageUrl: 'assets/images/recycable notebook.png',
-        ),
-        _SaleProductCard(
-          title: 'Classic Hoodie',
-          oldPrice: '£3.99',
-          newPrice: '£1.99',
-          imageUrl: 'assets/images/p cable.png',
-        ),
-        _SaleProductCard(
-          title: 'Dimple Pop Fidget Keyring',
-          oldPrice: '£2.99',
-          newPrice: '£0.99',
-          imageUrl: 'assets/images/dimple pop.png',
-        ),
-      ],
-    );
-  },
-),
-
+                      return GridView.count(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        crossAxisCount: columns,
+                        crossAxisSpacing: 24,
+                        mainAxisSpacing: 32,
+                        childAspectRatio: 0.72,
+                        children: const [
+                          _SaleProductCard(
+                            title: 'Recycled Notebook',
+                            oldPrice: '£17.00',
+                            newPrice: '£10.99',
+                            imageUrl: 'assets/images/recycable notebook.png',
+                          ),
+                          _SaleProductCard(
+                            title: 'Classic Hoodie',
+                            oldPrice: '£3.99',
+                            newPrice: '£1.99',
+                            imageUrl: 'assets/images/p cable.png',
+                          ),
+                          _SaleProductCard(
+                            title: 'Dimple Pop Fidget Keyring',
+                            oldPrice: '£2.99',
+                            newPrice: '£0.99',
+                            imageUrl: 'assets/images/dimple pop.png',
+                          ),
+                        ],
+                      );
+                    },
+                  ),
                 ],
               ),
             ),
-          )
-        ]),
+          ],
+        ),
       ),
     );
   }
