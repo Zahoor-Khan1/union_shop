@@ -21,3 +21,11 @@ testWidgets('Search page displays app bar title', (tester) async {
   expect(find.text('Search'), findsOneWidget);
 });
 
+testWidgets('Search input field is displayed', (tester) async {
+  await tester.pumpWidget(createTestWidget());
+  await tester.pump();
+
+  expect(find.byType(TextField), findsOneWidget);
+});
+
+
