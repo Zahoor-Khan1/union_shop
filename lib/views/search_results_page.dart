@@ -51,9 +51,17 @@ children: [
   const SizedBox(height: 16),
 Expanded(
   child: ListView.builder(
-    itemCount: products.length,
+itemCount: products
+    .where((product) =>
+        product['name']!.toLowerCase().contains(query.toLowerCase()))
+    .length,
     itemBuilder: (context, index) {
-      final product = products[index];
+final filteredProducts = products
+    .where((product) =>
+        product['name']!.toLowerCase().contains(query.toLowerCase()))
+    .toList();
+
+final product = filteredProducts[index];
       return ListTile(
         title: Text(product['name']!),
         subtitle: Text(product['price']!),
