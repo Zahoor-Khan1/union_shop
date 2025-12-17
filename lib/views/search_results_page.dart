@@ -48,6 +48,11 @@ final List<Map<String, String>> products = [
 
   @override
   Widget build(BuildContext context) {
+    final filteredProducts = products
+    .where((product) =>
+        product['name']!.toLowerCase().contains(query.toLowerCase()))
+    .toList();
+
    return Scaffold(
   appBar: AppBar(title: const Text('Search')),
 body: Padding(
@@ -82,6 +87,16 @@ final product = filteredProducts[index];
       return ListTile(
         title: Text(product['name']!),
         subtitle: Text(product['price']!),
+        onTap: () {
+  Navigator.pushNamed(
+    context,
+    '/product',
+    arguments: product['image'],
+  );
+},
+
+        
+
       );
     },
   ),
