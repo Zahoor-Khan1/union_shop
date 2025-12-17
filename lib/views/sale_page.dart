@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:union_shop/views/app_header.dart';
 
 class SalePage extends StatelessWidget {
   const SalePage({super.key});
@@ -7,63 +8,66 @@ class SalePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 40),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Text(
-                  'SALE',
-                  style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
+        child: Column(children: [
+          const AppHeader(),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 40),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Text(
+                    'SALE',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 16),
-                const Text(
-                  "Don't miss out! Get yours before they're all gone!",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16),
-                ),
-                const SizedBox(height: 12),
-                const Text(
-                  'All prices shown are inclusive of the discount. 🛒',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16),
-                ),
-                const SizedBox(height: 32),
-                GridView.count(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 16,
-                  mainAxisSpacing: 16,
-                  children: const [
-                    _SaleProductCard(
-                      title: 'Recycled Notebook',
-                      oldPrice: '£17.00',
-                      newPrice: '£10.99',
-                      imageUrl: 'assets/images/recycable notebook.png',
-                    ),
-                    _SaleProductCard(
-                      title: 'Classic Hoodie',
-                      oldPrice: '£3.99',
-                      newPrice: '£1.99',
-                      imageUrl: 'assets/images/p cable.png',
-                    ),
-                    _SaleProductCard(
-                      title: 'Dimple Pop Fidget Keyring',
-                      oldPrice: '£2.99',
-                      newPrice: '£0.99',
-                      imageUrl: 'assets/images/dimple pop.png',
-                    ),
-                  ],
-                ),
-              ],
+                  const SizedBox(height: 16),
+                  const Text(
+                    "Don't miss out! Get yours before they're all gone!",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  const SizedBox(height: 12),
+                  const Text(
+                    'All prices shown are inclusive of the discount. 🛒',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  const SizedBox(height: 32),
+                  GridView.count(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                    children: const [
+                      _SaleProductCard(
+                        title: 'Recycled Notebook',
+                        oldPrice: '£17.00',
+                        newPrice: '£10.99',
+                        imageUrl: 'assets/images/recycable notebook.png',
+                      ),
+                      _SaleProductCard(
+                        title: 'Classic Hoodie',
+                        oldPrice: '£3.99',
+                        newPrice: '£1.99',
+                        imageUrl: 'assets/images/p cable.png',
+                      ),
+                      _SaleProductCard(
+                        title: 'Dimple Pop Fidget Keyring',
+                        oldPrice: '£2.99',
+                        newPrice: '£0.99',
+                        imageUrl: 'assets/images/dimple pop.png',
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-        ),
+          )
+        ]),
       ),
     );
   }
