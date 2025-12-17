@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:union_shop/views/app_header.dart';
 
 class GraduationPage extends StatelessWidget {
   const GraduationPage({super.key});
@@ -6,10 +7,12 @@ class GraduationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Graduation'),
-      ),
-      body: Padding(
+      body: SingleChildScrollView(
+  child: Column(
+    children: [
+      const AppHeader(),
+      Padding(
+
         padding: const EdgeInsets.all(20),
         child: GridView.count(
           crossAxisCount: 2,
@@ -60,6 +63,9 @@ class GraduationPage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    ],
+      ),
       ),
     );
   }
