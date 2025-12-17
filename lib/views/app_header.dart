@@ -164,7 +164,9 @@ class AppHeader extends StatelessWidget {
                                 size: 18,
                                 color: Colors.grey,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/search');
+                              },
                             ),
                             IconButton(
                               icon: const Icon(
