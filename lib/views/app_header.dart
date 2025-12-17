@@ -182,7 +182,9 @@ class AppHeader extends StatelessWidget {
                                 size: 18,
                                 color: Colors.grey,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/cart');
+                              },
                             ),
                             IconButton(
                               icon: const Icon(
