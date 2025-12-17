@@ -41,16 +41,28 @@ double getTotal() {
                           children: [
                             Text(item.price),
                             const SizedBox(height: 4),
-                            SizedBox(
-                              width: 60,
-                              child: TextFormField(
-                                initialValue: item.quantity.toString(),
-                                keyboardType: TextInputType.number,
-                                onChanged: (value) {
-                                  item.quantity = int.tryParse(value) ?? 1;
-                                },
-                              ),
-                            ),
+                            Row(
+  children: [
+    IconButton(
+      icon: const Icon(Icons.remove_circle_outline),
+      onPressed: () {
+        setState(() {
+          if (item.quantity > 1) item.quantity--;
+        });
+      },
+    ),
+    Text(item.quantity.toString()),
+    IconButton(
+      icon: const Icon(Icons.add_circle_outline),
+      onPressed: () {
+        setState(() {
+          item.quantity++;
+        });
+      },
+    ),
+  ],
+),
+
                           ],
                         ),
                         trailing: Row(
