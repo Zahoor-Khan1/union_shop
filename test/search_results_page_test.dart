@@ -34,6 +34,18 @@ testWidgets('Search page shows product list items', (tester) async {
   await tester.pump();
 
   expect(find.text('Classic Hoodie'), findsOneWidget);
+  
 });
+testWidgets('Typing filters search results', (tester) async {
+  await tester.pumpWidget(createTestWidget());
+  await tester.pump();
+
+  await tester.enterText(find.byType(TextField), 'hoodie');
+  await tester.pump();
+
+  expect(find.text('Classic Hoodie'), findsOneWidget);
+  expect(find.text('Essential T-Shirt'), findsNothing);
+});
+
 
 
