@@ -26,7 +26,24 @@ final List<Map<String, String>> products = [
     'image': 'assets/images/signature hoodie.png',
     'price': '£32.99',
   },
-];
+      {
+      'name': 'Essential T-Shirt',
+      'image': 'assets/images/uop shirt.png',
+      'price': '£10.00',
+    },
+    {
+      'name': 'Graduation Hoodie',
+      'image': 'assets/images/graduate_hoodie.png',
+      'price': '£35.00',
+    },
+    {
+      'name': 'Pride Hoodie',
+      'image': 'assets/images/rainbow hoodie.png',
+      'price': '£14.00',
+    },
+  ];
+
+
 
 
   @override
