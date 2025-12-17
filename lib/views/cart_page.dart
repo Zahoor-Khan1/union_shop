@@ -22,7 +22,13 @@ double getTotal() {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Your Cart')),
+appBar: AppBar(
+  title: const Text(
+    'Your Cart',
+    style: TextStyle(fontWeight: FontWeight.bold),
+  ),
+  centerTitle: false,
+),
       body: cartItems.isEmpty
           ? const Center(child: Text('Your cart is empty'))
           : Column(
