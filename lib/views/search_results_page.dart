@@ -8,6 +8,8 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
+    String query = '';
+
 final List<Map<String, String>> products = [
   {
     'name': 'Classic Hoodie',
@@ -34,7 +36,19 @@ final List<Map<String, String>> products = [
 body: Padding(
   padding: const EdgeInsets.all(16),
   child: Column(
-    children: [
+children: [
+  TextField(
+    decoration: const InputDecoration(
+      hintText: 'Search products...',
+      border: OutlineInputBorder(),
+    ),
+    onChanged: (value) {
+      setState(() {
+        query = value;
+      });
+    },
+  ),
+  const SizedBox(height: 16),
 Expanded(
   child: ListView.builder(
     itemCount: products.length,
