@@ -1,0 +1,16 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:union_shop/views/search_page.dart';
+
+void main() {
+  Widget createTestWidget() {
+    return const MaterialApp(home: SearchPage());
+  }
+
+  testWidgets('Search page loads without crashing', (tester) async {
+    await tester.pumpWidget(createTestWidget());
+    await tester.pump();
+
+    expect(find.byType(Scaffold), findsOneWidget);
+  });
+}
