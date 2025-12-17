@@ -64,7 +64,32 @@ class _CartPageState extends State<CartPage> {
               const SizedBox(height: 4),
               Text(item.price),
               const SizedBox(height: 8),
-              Text('Quantity: ${item.quantity}'),
+Row(
+  children: [
+    IconButton(
+      icon: const Icon(Icons.remove),
+      onPressed: () {
+        setState(() {
+          if (item.quantity > 1) {
+            item.quantity--;
+          }
+        });
+      },
+    ),
+    Text(
+      item.quantity.toString(),
+      style: const TextStyle(fontSize: 16),
+    ),
+    IconButton(
+      icon: const Icon(Icons.add),
+      onPressed: () {
+        setState(() {
+          item.quantity++;
+        });
+      },
+    ),
+  ],
+),
             ],
           ),
         ),
