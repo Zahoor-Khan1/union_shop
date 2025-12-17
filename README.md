@@ -1,108 +1,109 @@
-Union Shop — Flutter Coursework
+# Union Shop — Flutter Coursework
 
-Student Name: ZahoorUllah Khan
-Course: BSc Computer Science
-Module: Programming Applications and Programming Languages (M30235)
-University: University of Portsmouth
+**Student Name:** ZahoorUllah Khan  
+**Course:** BSc Computer Science  
+**Module:** Programming Applications and Programming Languages (M30235)  
+**University:** University of Portsmouth  
 
-📱 Project Overview
+---
 
-This project is a Flutter-based recreation of the University of Portsmouth Student Union Shop website.
-The goal of this coursework was to replicate the structure, navigation, and functionality of the real Union Shop using Flutter, focusing mainly on mobile-first design, navigation, and core e-commerce features.
+## 📱 Project Overview
 
-The application includes multiple pages such as:
+This project is a **Flutter-based recreation of the University of Portsmouth Students’ Union Shop website**.  
+It was developed as part of coursework to demonstrate understanding of Flutter fundamentals, responsive UI design, navigation, state handling, and basic e-commerce functionality.
 
-Home page
+The application focuses on a **mobile-first approach** while remaining responsive on larger screens (Flutter Web).
 
-Product listings
+All product data is **hardcoded dummy data**, and **all images are stored locally** in the `assets/images` directory.
 
-Product detail pages
+---
 
-Shopping cart
+## ✨ Features
 
-Sale page
+### ✅ Basic Features (Completed)
+- Static Home page with banner and sections  
+- Responsive navigation bar (desktop & mobile)  
+- Footer displayed across major pages  
+- Static product detail pages with dropdowns  
+- Collections page with category navigation  
+- Sale page with discounted items  
+- Authentication UI (UI only)  
+- About Us page  
+- Print Shack About & Personalisation pages  
 
-Collections
+### ✅ Intermediate Features (Completed)
+- Full navigation using **named routes**
+- Product pages populated with hardcoded data
+- Dynamic navigation between collections and products
+- Fully working **shopping cart**
+- Personalisation page with dynamic text input
+- Responsive layouts for desktop and mobile
 
-The Union Print Shack (About & Personalisation)
+### ⚠️ Advanced Features (Partially Completed)
+- Cart management (add, remove, update quantity, total calculation)
+- Simulated checkout flow (no real payments)
+- Widget testing implemented for multiple pages
 
-All data used in this project is hardcoded dummy data and all images are stored locally in the assets folder.
+---
 
-✅ Features Implemented
-🔹 Basic Features (Completed)
+## 🛒 Shopping Cart Functionality
 
-Static homepage with hero banner and product sections
+- Add products to cart
+- Remove products from cart
+- Update product quantities
+- Automatic total price calculation
+- Simulated checkout confirmation
+- Cart state updates dynamically
 
-Responsive navigation bar (desktop & mobile menu)
+---
 
-Footer added to all major pages
-
-Static product pages with dropdowns
-
-Static collections page
-
-Sale page with discounted pricing
-
-Authentication UI (UI only)
-
-About Us page
-
-Print Shack About & Personalisation pages
-
-🔹 Intermediate Features (Completed)
-
-Full navigation across all pages using named routes
-
-Product pages populated with hardcoded data
-
-Dynamic navigation between collections and products
-
-Fully working shopping cart system
-
-Personalisation page with dynamic text fields
-
-Responsive layout for desktop and mobile
-
-🔹 Advanced Features (Partially Completed)
-
-Cart management (add, remove, update quantity, total calculation)
-
-Checkout flow (simulated, no real transactions)
-
-Testing implemented for Personalisation page
-
-🛒 Shopping Cart Functionality
-
-Add products to cart
-
-Remove products
-
-Quantity management
-
-Total price calculation
-
-Simulated checkout confirmation
-
-Cart updates dynamically
-
-🧵 The Union Print Shack
+## 🧵 The Union Print Shack
 
 Includes:
+- About page
+- Personalisation service page
+- Dynamic text input fields
+- Pricing information
+- Terms & conditions
+- Fully responsive layout
 
-About page
+---
 
-Personalisation service page
+## 🔍 Search Functionality
 
-Dynamic text fields
+- Search page with text input
+- Live filtering of products
+- Search results displayed as a list
+- Clicking a result navigates to the product page
 
-Pricing information
+---
 
-Terms & conditions
+## 🧪 Testing
 
-Fully responsive layout
+Widget tests have been implemented for:
+- Collections page
+- Search page
+- Cart page
 
-🧪 Testing
+Most tests pass successfully and validate:
+- Page rendering
+- UI elements visibility
+- Navigation
+- Basic interactions
 
-Testing has been implemented:
+---
 
-Almost all of tests  passed successfully.
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Flutter SDK installed
+- Chrome browser (for Flutter Web)
+- Dart enabled
+
+### Install & Run
+From the project root:
+
+```powershell
+flutter pub get
+flutter run -d chrome
