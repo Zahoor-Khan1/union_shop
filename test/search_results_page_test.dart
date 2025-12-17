@@ -14,3 +14,10 @@ void main() {
     expect(find.byType(Scaffold), findsOneWidget);
   });
 }
+testWidgets('Search page displays app bar title', (tester) async {
+  await tester.pumpWidget(createTestWidget());
+  await tester.pump();
+
+  expect(find.text('Search'), findsOneWidget);
+});
+
